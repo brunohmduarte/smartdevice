@@ -1,0 +1,104 @@
+$nav-background-color: #f2f2f2;
+$primary-color: #1688c7;
+$secondary-color: #ec751b;
+$primary-link-color: #02b4d2;
+$secondary-link-color: #1688c7;
+$price-color: #08b631;
+$border-color: #ddd;
+$btn-comprar-color: #159b44;
+$star-color:#ec751b;
+$star-empty-color:#777;
+
+$text-base-color: #333;
+$text-secondary-color: #999;
+
+$font-primary: "Open Sans", sans-serif;
+$font-titleBar: "Open Sans", sans-serif;
+$fs-small: .5rem;
+$fs-base: 1rem;
+$fs-large: 1.5rem;
+$fs-xlarge: 2rem;
+$fs-xxlarge: 3rem;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); 
+}
+
+@mixin border-radius($size...){
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  border-radius: $size;  
+}
+
+@mixin box-shadow($args...){
+  -moz-box-shadow:    $args;
+  -webkit-box-shadow: $args;
+  box-shadow:         $args;
+}
+
+// media query para responsivo direto do seletor do elemento
+@mixin mobileview {
+  @media only screen and (max-width: 769px) {
+    @content;
+  }
+}
+// media query para dispositivos de tela pequena direto do seletor do elemento
+@mixin smallmobileview {
+  @media only screen and (max-width: 360px) {
+    @content;
+  }
+}
+// media query para desktop direto do seletor do elemento
+@mixin desktopview {
+  @media screen and (min-width: 770px) {
+    @content;
+  }
+}
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+// scale
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+// translate
+@mixin translate($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// animation
+@mixin animation($args...){
+  -webkit-animation: $args;
+  -moz-animation: $args;
+  -ms-animation: $args;
+  -o-animation: $args;
+  animation: $args;
+}

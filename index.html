@@ -4,12 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Device</title>
-    <link rel="stylesheet" href="http://127.0.0.1:5500/assets/css/style.min.css">
+    <!-- Basic Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <!-- Filled Icons -->
+    <!-- <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet"> -->
+    <!-- Brand Icons -->
+    <!-- <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet"> -->
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="http://127.0.0.1:5500/assets/css/style.css">
 </head>
 <body>
+    <div class="site">
+        <header id="top">
+            <div class="navbar">
+                <div class="open-mobile-nav">
+                    <i class="bx bx-menu" style="font-size: 24px;"></i>
+                </div>
+                <div class="open-search">
+                    <i class="bx bx-search" style="font-size: 24px;"></i>
+                </div>
+                <div class="logo-wrapper">
+                    <h1><a href="#">Smart Device</a></h1>
+                </div>
+                <div class="open-minicart">
+                    <i class="bx bx-cart" style="font-size: 24px;"></i>
+                </div>
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Acessórios</a></li>
+                        <li><a href="#">Fones</a></li>
+                        <li><a href="#">Relógios</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        
+    </div>
     
     <script>
-        // window.location.href = "https://smartdevice.vercel.app/maintainance.html";
+        var isUnderMaintenance = true; // Defina isso como true para simular a manutenção
+        if (isUnderMaintenance) {
+            window.location.href = "http://127.0.0.1:5500/maintainance.html";
+        }
+
+        document.querySelector('.open-mobile-nav').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
     </script>
 </body>
 </html>

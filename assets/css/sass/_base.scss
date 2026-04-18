@@ -5,8 +5,8 @@
 }
 
 html {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    color: #333;
+    font-size: $fs-base;
+    font-family: $font-primary;
+    font-weight: $fw-regular;
+    color: $text-base-color;
 }

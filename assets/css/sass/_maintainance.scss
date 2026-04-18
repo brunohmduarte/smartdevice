@@ -4,25 +4,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: $nav-background-color;
 
     &_message {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
         text-align: center;
 
         h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: $fs-xxlarge;
+            font-weight: $fw-bold;
+            margin: .5rem;
         }
 
         p {
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: #666;
+            font-size: $fs-large;
+            font-weight: $fw-regular;
+            color: $text-secondary-color;
         }
     }
 }
