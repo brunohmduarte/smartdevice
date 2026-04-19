@@ -7,28 +7,52 @@
     <!-- Basic Icons -->
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
     <!-- Filled Icons -->
-    <!-- <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
     <!-- Brand Icons -->
-    <!-- <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
     <!-- Style sheet -->
-    <link rel="stylesheet" href="http://127.0.0.1:5500/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <div class="site">
         <header id="top">
             <div class="navbar">
                 <div class="open-mobile-nav">
-                    <i class="bx bx-menu" style="font-size: 24px;"></i>
+                    <i class="bx bx-menu" ></i>
                 </div>
+
                 <div class="open-search">
-                    <i class="bx bx-search" style="font-size: 24px;"></i>
+                    <i class="bx bx-search"></i>
+
+                    <div class="form-search">
+                        <form method="get">
+                            <input type="text" name="search" id="search" placeholder="O que você está procurando?" />
+                            <button class="btnsearch">
+                                <i class="bx bx-search"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
+
+                <div class="open-search-desktop">
+                    <form method="get">
+                        <input type="text" name="search" id="search" placeholder="O que você está procurando?" />
+                        <button class="btnsearch">
+                            <i class="bx bx-search"></i>
+                        </button>
+                    </form>
+                </div>
+
                 <div class="logo-wrapper">
                     <h1><a href="#">Smart Device</a></h1>
                 </div>
-                <div class="open-minicart">
-                    <i class="bx bx-cart" style="font-size: 24px;"></i>
-                </div>
+
+                <a href="#" class="open-minicart">
+                    <i class="bx bx-cart"></i>
+                    <div class="balloon">
+                        <span>0</span>
+                    </div>
+                </a>
             </div>
 
             <div class="menu">
@@ -42,17 +66,24 @@
             </div>
         </header>
 
-        
     </div>
     
     <script>
         var isUnderMaintenance = true; // Defina isso como true para simular a manutenção
         if (isUnderMaintenance) {
-            window.location.href = "http://127.0.0.1:5500/maintainance.html";
+            window.location.href = "./maintainance.html";
         }
 
         document.querySelector('.open-mobile-nav').addEventListener('click', function() {
+            document.querySelector('.open-search').classList.remove('active');
+            document.querySelector('.form-search').classList.remove('active');
             document.querySelector('.menu').classList.toggle('active');
+        });
+
+        document.querySelector('.open-search').addEventListener('click', function() {
+            document.querySelector('.menu').classList.remove('active');
+            this.classList.toggle('active');
+            document.querySelector('.form-search').classList.toggle('active');
         });
     </script>
 </body>
