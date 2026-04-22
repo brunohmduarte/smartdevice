@@ -71,9 +71,21 @@
         </header>
 
         <div class="banner-home">
-            <div class="banner-item">BANNER 1</div>
-            <div class="banner-item">BANNER 2</div>
-            <div class="banner-item">BANNER 3</div>
+            <div class="banner-item">
+                <a href="#">
+                    <img src="./assets/img/bg_banner_home01.jpg" alt="Banner Home" />
+                </a>
+            </div>
+            <div class="banner-item">
+                <a href="#">
+                    <img src="./assets/img/bg_banner_home02.jpg" alt="Banner Home" />
+                </a>
+            </div>
+            <div class="banner-item">
+                <a href="#">
+                    <img src="./assets/img/bg_banner_home03.jpg" alt="Banner Home" />
+                </a>
+            </div>
         </div>
 
         <div class="banner-ruler"></div>
@@ -124,7 +136,15 @@
 
         $(document).ready(function () {
             // declaration banner home
-            $('.banner-home').slick();
+            $('.banner-home').slick({
+                dots: true,
+                infinite: true,
+                speed: 400,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                arrows: true
+            });
         });
     </script>
 </body>

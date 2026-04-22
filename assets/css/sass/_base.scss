@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     font-size: $fs-base;
     font-family: $font-primary;
     font-weight: $fw-regular;
     color: $text-base-color;
+}
+img, form, h1, h2, h3, h4, h5, h6, p, span {
+    width: 100%;
 }
