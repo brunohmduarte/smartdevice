@@ -1040,5 +1040,19 @@ Responsive
   width: 100%;
   height: auto;
 }
+.site .banner-home .slick-prev {
+  left: 60px;
+  z-index: 1;
+}
+.site .banner-home .slick-prev:before {
+  font-size: 24px;
+}
+.site .banner-home .slick-next {
+  right: 60px;
+  z-index: 1;
+}
+.site .banner-home .slick-next:before {
+  font-size: 24px;
+}
 
 /*# sourceMappingURL=style.css.map */
