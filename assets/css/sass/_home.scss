@@ -282,11 +282,11 @@
 
     .banner-ruler {
         position: relative;
-        top: -3px;
+        top: -5px;
         left: 0;
         width: 100%;
         padding: 40px 100px;
-        background-color: #bebcbc;
+        background-color: #dadada;
 
         ul {
             padding: 0;
@@ -315,7 +315,7 @@
 
                     &.text {
                         margin-top: 8px;
-                        font-size: 12px;
+                        font-size: 1em;
                     }
                 }
 
@@ -328,7 +328,7 @@
 
     .showcase {
         position: relative;
-        top: -3px;
+        top: 0px;
         left: 0;
         width: 100%;
         padding: 40px 100px;
@@ -338,10 +338,11 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            gap: 8px;
 
             .icon {
-                width: 80px;
-                height: 80px;
+                width: 60px;
+                height: 60px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -362,29 +363,46 @@
             }
 
             .text {
-                width: 200px;
+                // max-width: 250px;
                 padding: 0 8px;
 
                 span {
-                    font-size: 12px;
+                    font-size: 1em;
+                }
+
+                h3 {
+                    font-size: 1.5em;
+                    font-weight: $fw-semibold;
                 }
             }
 
             .separator {
-                width: calc(100% - 80px - 200px - 125px);
+                // width: calc(100% - 80px - 250px - 125px);
                 height: 1px;
                 background-color: rgba(0, 0, 0, .222);   
-                margin-right: 1rem; 
+                margin-right: 1rem;
+                flex: 1;
             }
 
             a {
-                width: 125px;
+                // width: 125px;
                 text-decoration: none;
                 border: 1px solid #f00;
                 border-radius: 20px;
                 font-size: 0.8rem;
                 padding: .5rem 2rem;
-              }
+                color: #f00;
+            }
         }
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        background-color: #333;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 40px 100px;
     }
 }
