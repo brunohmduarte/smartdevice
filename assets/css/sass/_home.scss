@@ -404,5 +404,53 @@
         top: 0;
         left: 0;
         padding: 40px 100px;
+
+        .footer-info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1.5em;
+            .footer-logo {
+                h1 {
+                    font-size: 1.5em;
+                    font-weight: $fw-semibold;
+                    color: #fff;
+                }
+            }
+
+            dl.rodape-item {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                dt {
+                    font-size: 1.2em;
+                    font-weight: $fw-semibold;
+                    color: #fff;
+                    padding-bottom: .5em;
+                    border-bottom: 1px solid rgba(255, 255, 255, .222);
+                    margin-bottom: 1em;
+                }
+
+                dd {
+                    font-size: 1em;
+                    color: #fff;
+                }
+            }
+        }
+        
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, .222);
+
+            p {
+                font-size: 0.8em;
+                color: #fff;
+            }
+        }
     }
 }

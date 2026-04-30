@@ -1165,5 +1165,45 @@ Responsive
   left: 0;
   padding: 40px 100px;
 }
+.site footer .footer-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5em;
+}
+.site footer .footer-info .footer-logo h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #fff;
+}
+.site footer .footer-info dl.rodape-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.site footer .footer-info dl.rodape-item dt {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.222);
+  margin-bottom: 1em;
+}
+.site footer .footer-info dl.rodape-item dd {
+  font-size: 1em;
+  color: #fff;
+}
+.site footer .footer-copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.222);
+}
+.site footer .footer-copyright p {
+  font-size: 0.8em;
+  color: #fff;
+}
 
 /*# sourceMappingURL=style.css.map */
